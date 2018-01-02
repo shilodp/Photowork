@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Photo albums</title>
+	<script src="jquery.js"></script>
+	</head>
+<body>
+	<a id="auth" href=https://oauth.vk.com/authorize?client_id=6318303&display=page&redirect_uri=https://shilodp.github.io/Photowork/&scope=photos&response_type=token&v=5.69>Auth</a>
+<script>
+
+	var token;
+	var uid;
+	
+	function getToken () {
+		var URL=window.location.href;
+		var index1 = URL.indexOf("access_token=");
+		if (index1==-1) {
+			return token="null";
+		} else {
+			$("#auth").hide();
+			var index2 = URL.indexOf("&expires_in");
+			token= URL.substring(index1+13,index2);
+			uid = URL.substring(URL.indexOf("user_id=")+8);
+			return getAlbums();
+		};
+	};
+
+	function getUrl (method, params) {
+		if (!token) return showNone();
+		if (!method) throw new Error("Нет метода");
+		params=params||{};
+		params['access_token']=token;
+		alert($.param(params));
+		return 'http://api.vk.com/method/'+method+'?'+$.param(params);
+	};
+	
+	function sendRequest (method, params, func) {
+		$.ajax({
+			url: getUrl(method, params),
+			method: "GET",
+			dataType: "JSONP",
+			success:func
+		});
+	};
+
+	function getAlbums () {
+		sendRequest("photos.getAlbums",{owner_id: uid,need_covers:1}, function(data){console.log(data)});
+	};
+	function showAll () {};
+	function showNone () {};
+$(document).ready(getToken());
+</script>
+
+</body>
+
+</html>
