@@ -1,112 +1,144 @@
 #workDiv{
-			width:80vw;
-		}
-		#head div{
-			display:flex;
-			justify-content:flex-start;
-			align-items:center;
-		}
-		#head h3{
-			color: gray;
-		}
-		#albums{
-			padding:0;
-			margin:0;
-		}
-		.oneAlbum {
-			display:flex;
-			flex-direction:row;
-			justify-content:space-between;
-			align-items:stretch;
-			padding: 15px;
-			background:lightgray;
-			border-top: solid 1px gray;
-			border-bottom: solid 1px gray;
-		}
-		.album {
-			display:flex;
-			flex-direction:row;
-			justify-content:flex-start;
-		}
-		.album img.thumb {
-			width:100px;
-			height:100px;
-			margin-right: 15px;
-		}
-		.oneAlbum img.arrows {
-			width:35px;
-			height:35px;
-			align-self:center;
-			margin-right:20px;
-		}
-		.info{
-			display:flex;
-			flex-direction:column;
-			align-items:flex-start;
-			justify-content:space-around;
-		}
-		.info p{
-			margin:0;
-			color:gray;
-		}
-		.info h3{
-			margin:0;
-			color:blue;
-		}
-		img.file {
-			margin-left:10px;
-			width:12px;
-			height:12px;
-			margin-right:6px;
-		}
-		img.arrow {
-			width:25px;
-			height:25px;
-		}
-		#photos{
-			display:flex;
-			flex-wrap:wrap;
-			min-height:400px;
-			border-bottom:1px solid gray;
-			border-top:1px solid gray;
-		}
-		.photoSmall{
-			overflow:hidden;
-			display:flex;
-			flex-direction:column;
-			justify-content:space-between;
-			align-content:flex-start;
-			align-items:flex-start;
-			margin:10px;
-			border-radius:5px;
-			border:solid 1px gray;
-			background:lightgray;
-			width:150px;
-			height:258px;
-		}
-		.photoSmall img.smallPhoto{
-			height:230px;
-		}
-		.photoSmall p{
-			margin: 3px 0;
-			text-decoration:underline;
-			color:blue;
-		}
-		img.check {
-			margin-left:10px;
-			width:15px;
-			height:15px;
-		}
-		.onePhoto{
-			display:flex;
-			flex-direction:column;
-			justify-content:space-between;
-			align-content:flex-start;
-			align-items:center;
-			border-top:solid 1px gray;
-			border-bottom:solid 1px gray;
-			padding:15px;
-		}
-		span{
-			font-weight:bold
-		}
+	width:80vw;
+}
+p,h3,h4 {
+	font-family:sans-serif;
+}
+#head div{
+	display:flex;
+	justify-content:flex-start;
+	align-items:center;
+}
+#head a{
+	position:absolute;
+	left:35vw;
+	top:35vh;
+	display:block;
+	text-decoration:none;
+	background-color:#642EFE;
+	height: 30vh;
+	width: 30vw;	
+	display:flex;
+	justify-content:center;
+	align-items:center;	
+	border-radius:15px;
+}
+#head a div{
+	border: solid 3px white;
+	border-radius:10px;
+	height: 120px;
+	width: 300px;
+	background-color:#642EFE;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+#head a div h3{
+	font-weight: normal;
+	color: white;
+	font-size:2em;
+}
+#head h3{
+	color: gray;
+}
+#albums{
+	padding:0;
+	margin:0;
+}
+.oneAlbum {
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	align-items:stretch;
+	padding: 15px;
+	background:#E9EAEF;
+	border-top: solid 1px gray;
+	border-bottom: solid 1px gray;
+}
+.album {
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-start;
+}
+.album img.thumb {
+	width:100px;
+	height:100px;
+	margin-right: 15px;
+}
+.oneAlbum img.arrows {
+	width:35px;
+	height:35px;
+	align-self:center;
+	margin-right:20px;
+}
+.info{
+	display:flex;
+	flex-direction:column;
+	align-items:flex-start;
+	justify-content:space-around;
+}
+.info p{
+	margin:0;
+	color:gray;
+}
+.info h3{
+	margin:0;
+	color:#5779ED;
+}
+img.file {
+	margin-left:10px;
+	width:12px;
+	height:12px;
+	margin-right:6px;
+}
+img.arrow {
+	width:25px;
+	height:25px;
+}
+#photos{
+	display:flex;
+	flex-wrap:wrap;
+	min-height:400px;
+	border-bottom:1px solid gray;
+	border-top:1px solid gray;
+}
+.photoSmall{
+	overflow:hidden;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	align-content:flex-start;
+	align-items:flex-start;
+	margin:10px;
+	border-radius:5px;
+	border:solid 1px gray;
+	background:#E9EAEF;
+	width:150px;
+	height:258px;
+}
+.photoSmall img.smallPhoto{
+	height:230px;
+}
+.photoSmall p{
+	margin: 3px 0;
+	text-decoration:underline;
+	color:#5779ED;
+}
+img.check {
+	margin-left:10px;
+	width:15px;
+	height:15px;
+}
+.onePhoto{
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	align-content:flex-start;
+	align-items:center;
+	border-top:solid 1px gray;
+	border-bottom:solid 1px gray;
+	padding:15px;
+}
+span{
+	font-weight:bold
+}
